@@ -1,4 +1,4 @@
-// Require out dependencies
+// Require dependencies
 var express = require("express");
 var mongoose = require("mongoose");
 var expressHandlebars = require("express-handlebars");
