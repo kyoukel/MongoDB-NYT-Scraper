@@ -3,16 +3,14 @@ var scrape = require("../scripts/scrape");
 var makeDate = require("../scripts/date");
 
 // Bring in the Headline and Note mongoose models
-var Headline = require("../models/Headline")
+var Headline = require("../models/Headline");
 
 // deleting and saving functionality to use throughout project
 module.exports = {
 
     // fetch object is going to grab all of my articles and insert them into the headline section of my mongo database
-
     // whenever I run fetch, pass cb into that ()
-    fetch: functions(cb) {
-
+    fetch: function(cb) {
         // then run scrape and set data to be called articles
         scrape(function (data) {
             var articles = data;
@@ -36,11 +34,11 @@ module.exports = {
         });
     },
     // run delete function and remove whatever headline was queried.
-    delete: function(query, cb) {
+    delete: function (query, cb) {
         Headline.remove(query, cb);
     },
     // find all headlines in query and sort most recent to least recent 
-    get: function(query, cb) {
+    get: function (query, cb) {
         Headline.find(query)
             .sort({
                 _id: -1
@@ -52,7 +50,7 @@ module.exports = {
     },
 
     // update any new articles scraped with relevant id and update any info passed to those articles with that info as well.
-    update: function(query, cb) {
+    update: function (query, cb) {
         Headline.update({
             _id: query._id
         }, {
