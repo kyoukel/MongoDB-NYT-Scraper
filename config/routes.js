@@ -11,6 +11,7 @@ var notesController = require("../controllers/notes");
 module.exports = function(router) {
     // This route renders the homepage
     router.get("/", function(req, res) {
+        console.log("hit home?");
         res.render("home");
     });
     // This route renders the saved handlebars page

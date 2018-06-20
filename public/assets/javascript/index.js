@@ -1,3 +1,5 @@
+console.log("testing");
+
 $(document).ready(function () {
     
     // Setting a reference to the article-container div where all the dyname content will go
@@ -119,7 +121,7 @@ $(document).ready(function () {
     }
 
     function handleArticleScrape() {
-        
+        console.log("hello");
         // This () handles the user clicking any "scrape new article" buttons
         $.get("/api/fetch")
         .then(function(data) {

@@ -8,6 +8,11 @@ body {
     background-image: url("../images/paper.png");
 }
 
+background-image {
+    max-width: 100%;
+    height: auto;
+}
+
 .footer {
     position: absolute;
     bottom: 0;

@@ -12,11 +12,11 @@ var app = express();
 // Set up an Express Router
 var router = express.Router();
 
-// Require our routes file, pass our router object
-require("./config/routes")(router);
-
 // Designate our public folder as a static directory
 app.use(express.static(__dirname + "/public"));
+
+// Require our routes file, pass our router object
+require("./config/routes")(router);
 
 // Connect Handlebars to our Express app
 app.engine("handlebars", expressHandlebars({
@@ -34,6 +34,12 @@ app.use(router);
 
 // If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
 var db = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+
+// HW INSTRUCTIONS SAY TO USE THE CODE BELOW, BUT IT DOESN'T WORK
+// Set mongoose to leverage built in JavaScript ES6 Promises
+// Connect to the Mongo DB
+mongoose.Promise = Promise;
+// mongoose.connect(MONGODB_URI);
 
 mongoose.connect(db, function(error) {
     if(error) {
