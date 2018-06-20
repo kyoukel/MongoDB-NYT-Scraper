@@ -1,5 +1,3 @@
-console.log("testing");
-
 $(document).ready(function () {
     
     // Setting a reference to the article-container div where all the dyname content will go
