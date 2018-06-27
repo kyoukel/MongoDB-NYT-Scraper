@@ -7,18 +7,15 @@ var Headline = require("../models/Headline");
 
 // deleting and saving functionality to use throughout project
 module.exports = {
-
     // fetch object is going to grab all of my articles and insert them into the headline section of my mongo database
     // whenever I run fetch, pass cb into that ()
     fetch: function(cb) {
         // then run scrape and set data to be called articles
         scrape(function (data) {
             var articles = data;
-
             // go through each article and run makeDate() to insert the date
             for (var i = 0; i < articles.length; i++) {
                 articles[i].date = makeDate();
-
                 // and set saved to false on all of them
                 articles[i].saved = false;
             }

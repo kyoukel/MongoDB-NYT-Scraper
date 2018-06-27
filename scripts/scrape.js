@@ -7,7 +7,7 @@ var cheerio = require("cheerio");
 
 var scrape = function (cb) {
    // use request pkg to request website with results
-    request("http://www.nytimes.com", function(err, res, body){
+    request("https://www.nytimes.com/", function(err, res, body){
    
     // load body text
     var $ = cheerio.load(body);

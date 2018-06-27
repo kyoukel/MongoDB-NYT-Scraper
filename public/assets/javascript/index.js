@@ -1,8 +1,8 @@
-$(document).ready(function () {    
+$(document).ready(function() {    
     // Setting a reference to the article-container div where all the dyname content will go
-    var articleContainer = $("article-container");
+    var articleContainer = $(".article-container");
     // Adding event listeners to any dynamically generated "save article"
-    $(document).on("click", "btn.save", handleArticleSave);
+    $(document).on("click", ".btn.save", handleArticleSave);
     // and "scrape new article" buttons
     $(document).on("click", ".scrape-new", handleArticleScrape);
     
@@ -49,7 +49,7 @@ $(document).ready(function () {
                 "</a>",
                 "</h3>",
                 "</div>",
-                "<div class='panel-=body'>",
+                "<div class='panel-body'>",
                 article.summary,
                 "</div>",
                 "</div>"
