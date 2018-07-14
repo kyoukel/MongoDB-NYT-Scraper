@@ -31,7 +31,6 @@ background-image {
     height: 450px;
     font-family: "Cormorant SC";
     padding: 0;
-    /* background-color: #1f415c; */
     box-shadow: 10px 5px 20px 2px lightslategrey;
     opacity: 0.7;
 }
@@ -82,14 +81,6 @@ background-image {
 .panel.panel-default .panel-heading a.btn {
     margin-left: 40px;
 }
-
-/* .panel.panel-default {
-    background-color: blue;
-} */
-
-/* .panel {
-    background-color: blue;
-} */
 
 .footer {
     background-color: #2196f3;
